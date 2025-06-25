@@ -45,6 +45,11 @@ class View(ft.UserControl):
         self._page.controls.append(self.txt_result)
         self._page.update()
 
+    def create_alert(self, message):
+        dlg = ft.AlertDialog(title=ft.Text(message))
+        self._page.dialog = dlg
+        dlg.open = True
+        self._page.update()
 
     @property
     def controller(self):
